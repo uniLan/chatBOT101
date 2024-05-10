@@ -1,9 +1,10 @@
 import dotenv
-from langchain_core.runnables.history import RunnableWithMessageHistory
+
 from langchain_openai import ChatOpenAI
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain.memory import ChatMessageHistory
 from langchain_core.runnables import RunnablePassthrough
+from langchain_core.runnables.history import RunnableWithMessageHistory
 
 OPENAI_API_KEY = ''
 chat = ChatOpenAI(model="gpt-3.5-turbo-1106", temperature=0.2, openai_api_key=OPENAI_API_KEY)
